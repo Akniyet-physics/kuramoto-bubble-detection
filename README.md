@@ -1,4 +1,4 @@
-# kuramoto-bubble-detection
+# Kuramoto Synchronization Model as a Financial Bubble Detector
 Kuramoto synchronization model applied to financial bubble detection
 
 ## Where the idea came from
