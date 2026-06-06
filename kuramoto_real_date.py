@@ -34,6 +34,9 @@ def R(tickers, start, end):
     phases = np.array([np.unwrap(np.angle(hilbert(r - np.convolve(r, np.ones(60)/60, 'same')))) for r in ret.T]).T
     return P.index[1:], np.abs(np.mean(np.exp(1j * phases), axis=1))
 
+# --- Smoothing ---
+# Removes noise by averaging over a 30-day window.
+
 S = lambda x: np.convolve(x, np.ones(30)/30, 'same')
 
 print("Downloading dotcoms (1995–2001)...")
@@ -43,6 +46,11 @@ print("Downloading AI-market (2023–now)...")
 a_idx, Ra = R(AI_TICKERS, AI_START, AI_END)
 
 Rd, Ra = S(Rd), S(Ra)
+
+# --- Detect synchronization peak ---
+# Find the day when dot-com companies reached maximum synchronization —
+# the transition point from independent behaviour to herd effect.
+
 crash_day = Rd.argmax()
 
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5), facecolor="#0A1628")
