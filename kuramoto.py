@@ -63,7 +63,9 @@ crash_day = Rd[:int(len(Rd)*0.9)].argmax()
 
 fig, (a1,a2) = plt.subplots(1,2, figsize=(14,5), facecolor="#0A1628")
 for a in (a1,a2):
-    a.set_facecolor("#0D1B2A"); a.tick_params(colors="#7EB8D4"); a.grid(color="#1E3A5F",ls="--",alpha=0.5)
+    a.set_facecolor("#0D1B2A") 
+    a.tick_params(colors="#7EB8D4") 
+    a.grid(color="#1E3A5F",ls="--",alpha=0.5)
 
 a1.plot(Rd, color="#00A8A8", lw=1.8, label="R(t) dotcoms")
 a1.axvline(crash_day, color="#EF5350", ls="--", label=f"Peak synchronization (day {crash_day})")
