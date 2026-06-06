@@ -12,4 +12,4 @@ The core idea of the Kuramoto model is synchronization between objects. In finan
 
 ## About the data
 
-The project contains two programs. kuramoto.py uses artificially generated data modelled to approximate real market behaviour — because historical data on dot-com era companies that went bankrupt is not publicly accessible. AI giants of that era are deliberately excluded, as they already had diversified revenue streams and did not follow the typical bubble pattern. kuramoto_real.py uses real data from major AI companies as the only available open source, serving as a reference point for comparison.
+The project contains two programs. kuramoto.py uses artificially generated data modelled to approximate real market behaviour — because historical data on dot-com era companies that went bankrupt is not publicly accessible. AI giants of that era are deliberately excluded, as they already had diversified revenue streams and did not follow the typical bubble pattern. kuramoto_real_date.py uses real data from major AI companies as the only available open source, serving as a reference point for comparison.
